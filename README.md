@@ -35,8 +35,8 @@ Dependencies:
 ### Install go lang
 
     $ sudo apt-get install -y build-essential
-    $ wget https://redirector.gvt1.com/edgedl/go/go1.9.2.linux-amd64.tar.gz
-    $ tar zxvf go1.9.2.linux-amd64.tar.gz 
+    $ wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz
+    $ tar zxvf go1.11.linux-amd64.tar.gz
     $ sudo mv go /usr/local
 
 Type the command below.
@@ -107,9 +107,10 @@ If it doesn’t work, run the command below first.
 
 ### Run go-esn
 If you use Ubuntu, it is easier to control terminal by screen command. You can get the manual by searching Ubuntu screen on Google.
+To start a Gesn instance for mining, run it with all your usual flags, extended by:
 
     $ screen -S esn1
-    $ gesn --cache=1024 --txpool.pricelimit 1000000 --rpc --rpcaddr 127.0.0.1 --rpcport 8545 --rpcapi "eth,net,web3" console
+    $ gesn --cache=1024 --mine --txpool.pricelimit 1000000 --rpc --rpcaddr 127.0.0.1 --rpcport 8545 --rpcapi "eth,net,web3" console
     Crtl + a, d
 
 If you want to go back to the original terminal,
